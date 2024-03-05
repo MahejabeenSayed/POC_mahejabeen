@@ -1,0 +1,14 @@
+{
+  "sign_in": "Anmeldung",
+  "username": "Nutzername",
+  "home_title": "Melden Sie sich an, um Chat zu öffnen",
+
+  "chat_title": "Open Chat",
+  "active_users": "Aktive Benutzer",
+  "hangout": "Hangout mit Kollegen",
+  "leave_chat": "Chat verlassen",
+  "send_message": "senden",
+  "write_message": "Schreiben Sie eine Nachricht",
+  "you": "du",
+  "is_typing": "tippt..."
+}

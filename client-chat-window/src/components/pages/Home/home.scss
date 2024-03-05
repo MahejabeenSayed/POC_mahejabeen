@@ -1,0 +1,58 @@
+@use "../../../sass/base.scss" as *;
+
+.intl-wrapper {
+    margin: $bazaar-margin-20;
+    text-align: right;
+}
+
+
+.home_wrapper {
+        width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+}
+
+body {
+    background-color: $bg-grey;
+}
+
+.home__container {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.home__container>* {
+    margin-bottom: 10px;
+}
+
+.home__header {
+    margin-bottom: 30px;
+}
+
+.username__input {
+    padding: 10px;
+    width: 50%;
+}
+
+.home__cta {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #607EAA;
+    color: #F9F5EB;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
