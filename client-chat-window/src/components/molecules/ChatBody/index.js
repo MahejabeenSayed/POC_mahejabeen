@@ -1,19 +1,26 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { useNavigate } from "react-router-dom";
 import Button from "../../atoms/Button/Button";
+import Modal from "../../atoms/Modal/Modal";
 
 const ChatBody = ({ messages, typingStatus, lastMessageRef }) => {
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     console.log("-----", typingStatus);
   });
 
+  const confirmLeave = () => {
+    setIsOpen(true);
+  };
+
   const handleLeaveChat = () => {
     localStorage.removeItem("userName");
     navigate("/");
     window.location.reload();
+    setIsOpen(false);
   };
 
   return (
@@ -22,7 +29,7 @@ const ChatBody = ({ messages, typingStatus, lastMessageRef }) => {
         <p>
           <FormattedMessage id="hangout" />
         </p>
-        <Button variant="secondary" onClick={handleLeaveChat}>
+        <Button variant="secondary" onClick={confirmLeave}>
           <FormattedMessage id="leave_chat" />
         </Button>
       </header>
@@ -52,6 +59,15 @@ const ChatBody = ({ messages, typingStatus, lastMessageRef }) => {
           <p>{typingStatus}</p>
         </div>
         <div ref={lastMessageRef} />
+
+        <Modal
+          isOpen={isOpen}
+          hasCloseBtn={true}
+          onClose={() => setIsOpen(false)}
+          onConfirm={() => handleLeaveChat()}
+        >
+          Are you sure you want to leave the chat ?
+        </Modal>
       </div>
     </>
   );

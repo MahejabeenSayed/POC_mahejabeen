@@ -41,16 +41,4 @@ describe("Chat Body", () => {
     const headingEle = screen.getByText(/Hangout with Colleagues/i);
     expect(headingEle).toBeInTheDocument();
   });
-
-  //   test("renders new user heading", () => {
-  //     render(
-  //       <BrowserRouter>
-  //         <IntlProviderWrapper>
-  //           <Sidebar socket={socket} />
-  //         </IntlProviderWrapper>
-  //       </BrowserRouter>
-  //     );
-  //     const userEle = screen.getByText(/johndeo/i);
-  //     expect(userEle).toBeInTheDocument();
-  //   });
 });

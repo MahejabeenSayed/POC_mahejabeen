@@ -25,7 +25,7 @@ describe("Home", () => {
         </IntlProviderWrapper>
       </BrowserRouter>
     );
-    const headingEle = screen.getByText(/Sign in to Open Chat/i);
+    const headingEle = screen.getByText(/Join in to Open Chat/i);
     expect(headingEle).toBeInTheDocument();
   });
 });

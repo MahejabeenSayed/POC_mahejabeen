@@ -12,6 +12,8 @@ const Footer = ({ socket }) => {
       })}`
     );
 
+  const handleTypingStopped = () => socket.emit("typing", false);
+
   const handleSendMessage = (e) => {
     e.preventDefault();
     if (message.trim() && localStorage.getItem("userName")) {
@@ -34,6 +36,7 @@ const Footer = ({ socket }) => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
           onKeyDown={handleTyping}
+          onKeyUp={handleTypingStopped}
           data-testid="send_msg_textbox"
         />
       </form>
