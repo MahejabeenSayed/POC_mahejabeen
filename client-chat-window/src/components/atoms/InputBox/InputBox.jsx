@@ -28,7 +28,7 @@ const InputBox = ({ type, id, label, placeholder, onChange , ...props }) => {
 
     return (
         <div className="inputbox" data-testid="inputbox">
-            <label htmlFor={id} className='inputbox__label'>{label}</label>
+            {label && <label htmlFor={id} className='inputbox__label'>{label}</label>}
             <input type={type} name={id} id={id} className='inputbox__field' placeholder={placeholder} onChange={handleInputChange} {...props}/>
         </div>
     )

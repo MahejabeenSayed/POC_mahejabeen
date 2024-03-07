@@ -4,20 +4,19 @@
 	display: flex;
 	max-width: 578px;
 	margin: 0 auto 10px auto;
-	padding: 0px 20px;
 	align-items: center;
 	gap: 8px;
 	border-radius: 2px;
 	background: $white;
-	border: 1px solid $gray-100;
-	border-radius: 10px;
+
 
 	&__label {
-		display: none;
+		// display: none;
 		font-size: 14px;
 		font-style: normal;
 		font-weight: 400;
 		line-height: 20px;
+		margin-right : 10px;
 	}
 
 	&__field {
@@ -31,5 +30,8 @@
 		font-style: normal;
 		font-weight: 400;
 		line-height: 20px;
+		border: 1px solid $gray-100 !important;
+		border-radius: 10px;
+		padding: 6px 20px;
 	}
 }

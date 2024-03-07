@@ -32,7 +32,7 @@ const Home = ({ socket }) => {
           minLength={6}
           name="username"
           id="username"
-          className="username__input"
+          // className="username__input"
           value={userName}
           onChange={(e) => setUserName(e.target.value)}
         />

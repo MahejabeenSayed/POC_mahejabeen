@@ -29,9 +29,11 @@ const ChatBody = ({ messages, typingStatus, lastMessageRef }) => {
         <p>
           <FormattedMessage id="hangout" />
         </p>
-        <Button variant="secondary" onClick={confirmLeave}>
-          <FormattedMessage id="leave_chat" />
-        </Button>
+        <Button
+          label={<FormattedMessage id="leave_chat" />}
+          variant="secondary"
+          onClick={confirmLeave}
+        />
       </header>
 
       <div className="message__container">

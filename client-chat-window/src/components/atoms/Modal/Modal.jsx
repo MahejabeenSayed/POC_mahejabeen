@@ -57,13 +57,10 @@ const Modal = ({
 
         </div>
       <div className="actions">
-        <Button variant="primary-blue" onClick={handleConfirmModal}>
-          Yes
-        </Button>
+        <Button label="Yes" variant="primary-blue" onClick={handleConfirmModal} />
 
-        {hasCloseBtn && ( <Button variant="secondary" onClick={handleCloseModal}>
-          Close
-        </Button>
+
+        {hasCloseBtn && ( <Button label="No" variant="secondary" onClick={handleCloseModal} />
         )}
       </div>
     </dialog>
